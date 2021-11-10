@@ -1,0 +1,50 @@
+@use '../util' as *;
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+	background: url(../../../images/bg_img.svg) no-repeat center bottom fixed;
+	background-size: cover;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a,
+a:visited,
+a:link {
+	text-decoration: none;
+	color: inherit;
+}
+
+body {
+	font-family: var(--body);
+	color: var(--white);
+	max-width: rem(1150);
+	margin: auto;
+}
+
+header {
+	h1 {
+		font-family: var(--heading);
+		font-weight: 400;
+		font-size: rem(44);
+	}
+}
+
+.test {
+	content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: .5s ease;
+}
