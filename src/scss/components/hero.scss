@@ -8,7 +8,7 @@
     &__personal {
         h2 {
             margin-bottom: rem(20);
-            font-size: rem(28);
+            font-size: rem(32);
         }
 
         p {
@@ -19,20 +19,31 @@
         &--socials {
             display: flex;
             img {
+                width: rem(50);
+                height: rem(50);
                 margin-right: rem(20);
-                width: rem(45);
                 border-radius: 50%;
+                border: 1px solid var(--dkgray);
                 transition: ease-in-out 400ms;
             }
 
             img:hover {
-                border-color: var(--cyan);
-                box-shadow: 0 0 12px 2px var(--cyan);
+                box-shadow: 0 0 12px 2px var(--ltgreen);
             }
         }
     }
 
     &__image {
-        
+        display: flex;
+        margin: auto;
+        width: rem(400);
+        height: rem(400);
+        background-color: var(--white);
+        border-radius: 50%;
+        overflow: hidden;
+ 
+        img {
+
+        }
     }
 }
