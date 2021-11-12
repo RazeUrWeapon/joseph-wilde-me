@@ -1,8 +1,8 @@
 @use '../util' as *;
 
 html {
-	font-size: 100%;
 	box-sizing: border-box;
+	font-size: 100%;
 	background: url(../../../images/bg_img.svg) no-repeat center bottom fixed;
 	background-size: cover;
 }
@@ -26,17 +26,18 @@ a:link {
 }
 
 body {
-	font-family: var(--body);
-	color: var(--white);
 	max-width: rem(1150);
 	margin: auto;
+	font-family: var(--body);
+	line-height: 1.5;
+	color: var(--white);
 }
 
 header {
 	h1 {
 		font-family: var(--heading);
 		font-weight: 400;
-		font-size: rem(44);
+		font-size: rem(38);
 	}
 }
 

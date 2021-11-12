@@ -1,0 +1,38 @@
+@use '../util' as *;
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: rem(50);
+
+    &__personal {
+        h2 {
+            margin-bottom: rem(20);
+            font-size: rem(28);
+        }
+
+        p {
+            margin-bottom: rem(40);
+            font-size: rem(19);
+        }
+
+        &--socials {
+            display: flex;
+            img {
+                margin-right: rem(20);
+                width: rem(45);
+                border-radius: 50%;
+                transition: ease-in-out 400ms;
+            }
+
+            img:hover {
+                border-color: var(--cyan);
+                box-shadow: 0 0 12px 2px var(--cyan);
+            }
+        }
+    }
+
+    &__image {
+        
+    }
+}
