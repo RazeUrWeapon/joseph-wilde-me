@@ -5,6 +5,7 @@ html {
 	font-size: 100%;
 	background: url(../../../images/bg_img.svg) no-repeat center bottom fixed;
 	background-size: cover;
+	
 }
 
 *,
@@ -26,26 +27,22 @@ a:link {
 }
 
 body {
-	max-width: rem(1150);
 	margin: auto;
+	padding: 0 rem(20);
 	font-family: var(--body);
-	line-height: 1.5;
 	color: var(--white);
 }
 
-header {
-	h1 {
-		font-family: var(--heading);
-		font-weight: 400;
-		font-size: rem(38);
-	}
-}
+.button-style {
+		margin-right: rem(25);
+		padding: rem(14);
+		border: 1px solid var(--gray);
+		font-weight: 500;
+		text-transform: uppercase;
+		transition: ease-in-out 300ms;
 
-.test {
-	content: "";
-    display: block;
-    height: 2px;
-    width: 0;
-    background: transparent;
-    transition: .5s ease;
+	&:hover {
+		box-shadow: 0 0 5px 1px var(--ltgreen);
+		border: 1px solid var(--ltgreen);
+	}
 }
