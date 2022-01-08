@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,18 +10,41 @@
 
         <title>Joseph Wilde | Front-End Developer</title>
 
-		<link rel="shortcut icon" href="images/jw_favicon.png" />
+		<link rel="shortcut icon" href="img/jw_favicon.png" />
 		<link rel="stylesheet" href="/dist/style.css" />
 		<script defer src="/dist/script.js"></script>
 	</head>
 	<body>
 		<header>
-			<a href="#"><h1>JW</h1></a>
+			<div class="overlay has-fade"></div>
 			<nav>
-				<a href="#">Projects</a>
-				<a href="#">Blog</a>
-				<a href="#">Contact</a>
+				<a href="#top">
+					<h1 class="logo">JW</h1>
+				</a>
+				<!-- Hamburger menu bars -->
+				<a id="hamburgerButton" href="#" class="header__toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+ 
+				<div class="desktop-links">
+					<a href="projects.html">Projects</a>
+					<a href="blog.html">Blog</a>
+					<a href="contact.html">Contact</a>
+				</div>
 			</nav>
+
+			<div class="mobile-menu has-fade">
+				<a href="#projects">Projects</a>
+				<a href="#blog">Blog</a>
+				<a href="#contact">Contact</a>
+				<div class="mobile-menu__social-icons">
+					<a href="https://github.com/RazeUrWeapon"><img src="img/github_icon.png" alt="Github profile"></a>
+					<a href="https://www.linkedin.com/in/joseph-michael1/"><img src="img/linkedin_icon.png" alt="LinkedIn profile"></a>
+					<a href="https://twitter.com/Ra5eUrWeapon"><img src="img/twitter_icon.png" alt="Twitter profile"></a>
+				</div>
+			</div>
 		</header>
 		<section class="hero">
 			<div class="hero__personal">
@@ -31,15 +54,14 @@
 			<div class="hero__socials">
 				<a href="https://github.com/RazeUrWeapon"><img src="images/github_icon.png" alt=""></a>
 				<a href="https://www.linkedin.com/in/joseph-michael1/"><img src="images/linkedin_icon.png" alt=""></a>
-				<!-- <a href="#"><img src="images/ig_icon.png" alt=""></a> -->
 				<a href="https://twitter.com/Ra5eUrWeapon"><img src="images/twitter_icon.png" alt=""></a>
 			</div>
 			<div class="hero__buttons">
-				<a href="#" class="hero__buttons--projects button-style">My Projects</a>
-				<a href="#" class="hero__buttons--journey button-style">My Coding Journey</a>
+				<a href="#" class="hero__buttons--projects button">My Projects</a>
+				<a href="#" class="hero__buttons--journey button">My Coding Journey</a>
 			</div>
 			<div class="hero__image">
-				<img src="images/bitmoji_profile.png" alt="">
+				<img src="img/bitmoji_profile.png" alt="">
 			</div>
 		</section>
 	</body>

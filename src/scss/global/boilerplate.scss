@@ -1,11 +1,9 @@
 @use '../util' as *;
 
 html {
-	box-sizing: border-box;
 	font-size: 100%;
-	background: url(../../../images/bg_img.svg) no-repeat center bottom fixed;
-	background-size: cover;
-	
+	scroll-behavior: smooth;
+	background-color: var(--dkgray);	
 }
 
 *,
@@ -17,6 +15,7 @@ html {
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 a,
@@ -27,22 +26,67 @@ a:link {
 }
 
 body {
-	margin: auto;
-	padding: 0 rem(20);
 	font-family: var(--body);
 	color: var(--white);
 }
 
-.button-style {
+.button {
 		margin-right: rem(25);
 		padding: rem(14);
 		border: 1px solid var(--gray);
 		font-weight: 500;
 		text-transform: uppercase;
-		transition: ease-in-out 300ms;
+		transition: all 300ms ease-in-out;
 
 	&:hover {
 		box-shadow: 0 0 5px 1px var(--ltgreen);
 		border: 1px solid var(--ltgreen);
 	}
+}
+
+// Mobile menu fade in/out effects
+.has-fade {
+    visibility: hidden;
+}
+
+@keyframes fade-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fade-out 300ms ease-in-out forwards;
 }
