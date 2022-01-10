@@ -1,16 +1,24 @@
 @use '../util' as *;
 
 .hero {
-    margin: rem(15) 5%;
+    height: 100vh;
+    margin: 0 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    @include breakpoint-up(medium) {
+        height: 100%;
+        margin-bottom: 8%;
+    }
+
     @include breakpoint-up(large) {
-        max-width: rem(1024);
-        margin: rem(50) auto;
+        max-width: rem(1004);
+        margin: 0 auto 8%;
+        padding: 15vh 0 0;
         flex-direction: row;
-        gap: rem(75);
+        align-items: start;
+        gap: rem(100);
     }
 
     &__info {
@@ -20,9 +28,9 @@
 
         &--heading {
 
-            @include breakpoint-up(medium) {
-                margin: 0 8%;
-            }
+            // @include breakpoint-up(medium) {
+            //     margin: 0 8%;
+            // }
 
             @include breakpoint-up(large) {
                 margin: auto;
@@ -38,6 +46,7 @@
             
             p {
                 margin-bottom: rem(26);
+                line-height: 1.5;
     
                 @include breakpoint-up(medium) {
                     margin-bottom: rem(36);
@@ -52,9 +61,7 @@
             flex-wrap: wrap;
             gap: rem(5);
            
-            @include breakpoint-up(medium) {
-                margin: 0 8%;
-    
+            @include breakpoint-up(medium) {    
                 a {
                     margin-right: rem(5);
                 }
@@ -66,7 +73,6 @@
         }
     }
     &__image {
-        width: 90%;
         max-width: 350px;
         margin-bottom: rem(20);
         border-radius: 50%;
@@ -76,12 +82,14 @@
         z-index: -1;
 
         @include breakpoint-up(large) {
+            margin-bottom: 0;
             flex: 1 1 50%;
             order: 0;
         }
 
         img {
             width: 100%;
+            height: 100%;
         }
     }
 }

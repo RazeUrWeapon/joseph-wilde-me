@@ -9,7 +9,7 @@ header {
         padding: 0 10% 0;
         margin-top: 1%;
     }
-
+    // Overlay for mobile menu
     .overlay {
         opacity: 0;
         position: fixed;
@@ -74,13 +74,13 @@ header {
                 }
             }
         }
-        // Desktop link transition styling
+        
         .desktop-links {
             display: none;
 
             @include breakpoint-up(large) {
                 display: block;
-
+                
                 a {
                     margin-left: rem(20);
                     padding: rem(3) 0;
@@ -89,6 +89,7 @@ header {
                     font-weight: 500;
                     position: relative;
                 }
+                // Underlining styling for desktop links
                 a::after {
                     content: '';
                     position: absolute;

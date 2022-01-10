@@ -30,6 +30,18 @@ body {
 	color: var(--white);
 }
 
+h2 {
+    font-size: rem(24);
+
+    @include breakpoint-up(medium) {
+        font-size: rem(28);
+    }
+
+    @include breakpoint-up(large) {
+        font-size: rem(32);
+    }
+}
+
 .button {
 		padding: rem(12);
 		border: 1px solid var(--ltgreen);
