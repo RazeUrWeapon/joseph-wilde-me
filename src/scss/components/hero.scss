@@ -1,65 +1,85 @@
 @use '../util' as *;
 
 .hero {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr rem(70);
-    grid-row-gap: rem(10);
-    max-width: rem(1280);
-    margin: 10% auto;
+    margin: rem(15) 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    &__personal {
-        margin-right: rem(120);
-        h2 {
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-            margin-bottom: rem(20);
-            font-size: rem(35);
-        }
-
-        p {
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
-            margin-bottom: rem(40);
-            font-size: rem(22);
-            line-height: 1.5;
-        }
+    @include breakpoint-up(large) {
+        max-width: rem(1024);
+        margin: rem(50) auto;
+        flex-direction: row;
+        gap: rem(75);
     }
 
-    &__socials {
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-        justify-self: center;
-
-        img {
-            width: rem(45);
-            // margin-right: rem(20);
-            border-radius: 50%;
-            transition: ease-in-out 300ms;
+    &__info {
+        @include breakpoint-up(large) {
+            flex: 1 1 50%;
         }
 
-        img:hover {
-            box-shadow: 0 0 5px 1px var(--ltgreen);
-            background-color: var(--ltgreen);
+        &--heading {
 
+            @include breakpoint-up(medium) {
+                margin: 0 8%;
+            }
+
+            @include breakpoint-up(large) {
+                margin: auto;
+            }
+    
+            h2 {
+                margin-bottom: rem(10);
+    
+                @include breakpoint-up(medium) {
+                    margin-bottom: rem(20);
+                }
+            }
+            
+            p {
+                margin-bottom: rem(26);
+    
+                @include breakpoint-up(medium) {
+                    margin-bottom: rem(36);
+                    font-size: rem(18);
+                }
+            }
+        }
+
+        &--buttons {
+            display: flex;
+            align-self: start;
+            flex-wrap: wrap;
+            gap: rem(5);
+           
+            @include breakpoint-up(medium) {
+                margin: 0 8%;
+    
+                a {
+                    margin-right: rem(5);
+                }
+            }
+
+            @include breakpoint-up(large) {
+                margin: auto;
+            }
         }
     }
-
-    &__buttons {
-        grid-row: 2 / 3;
-        margin-top: rem(14);
-    }
-
     &__image {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-        width: rem(350);
-        height: rem(350);
-        justify-self: center;
-        align-self: center;
+        width: 90%;
+        max-width: 350px;
+        margin-bottom: rem(20);
         border-radius: 50%;
         overflow: hidden;
- 
+        order: -1;
+        opacity: 0.9;
+        z-index: -1;
+
+        @include breakpoint-up(large) {
+            flex: 1 1 50%;
+            order: 0;
+        }
+
         img {
             width: 100%;
         }
