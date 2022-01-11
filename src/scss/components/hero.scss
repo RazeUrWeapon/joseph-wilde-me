@@ -45,23 +45,33 @@
             }
             
             p {
-                margin-bottom: rem(26);
+                margin-bottom: rem(50);
+                font-size: rem(20);
                 line-height: 1.5;
     
                 @include breakpoint-up(medium) {
-                    margin-bottom: rem(36);
+                    margin-bottom: rem(80);
                     font-size: rem(18);
+                }
+
+                span {
+                    color: var(--ltgreen);
+                    font-weight: 500;
                 }
             }
         }
 
         &--buttons {
+            position: absolute;
+            bottom: 10%;
             display: flex;
             align-self: start;
             flex-wrap: wrap;
             gap: rem(5);
            
             @include breakpoint-up(medium) {    
+                position: static;
+
                 a {
                     margin-right: rem(5);
                 }

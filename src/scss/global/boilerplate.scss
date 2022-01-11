@@ -31,14 +31,14 @@ body {
 }
 
 h2 {
-    font-size: rem(24);
+    font-size: rem(28);
 
     @include breakpoint-up(medium) {
-        font-size: rem(28);
+        font-size: rem(32);
     }
 
     @include breakpoint-up(large) {
-        font-size: rem(32);
+        font-size: rem(36);
     }
 }
 
