@@ -40,7 +40,7 @@ mobileMenu.addEventListener('click', () => {
 const typewriterText = document.querySelector('.typewriter-text');
 const phrases = [
     'being a dog dad. ',
-    'learning about Web3 technologies. ',
+    'learning about blockchain technologies. ',
     'DJing for fun. ',
     'playing games with friends. '
 ]

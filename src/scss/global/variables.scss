@@ -1,16 +1,21 @@
 :root {
     //Colors
+    //Unused
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
     --graygreen: hsl(193,75%,14%);
     --cyan: hsl(178,100%,30%);
-    --ltgreen: hsl(159,92%,56%);
-    --ltgreenbg: hsl(159,92%,40%);
-    --ltgray: hsl(173,41%,87%);
     --gray: hsl(0,0%,45%);
+    //Used
     --dkgray: hsl(330,3%,12%);
+    --ltgreen: hsl(159,92%,56%);
+    --alt: hsl(0, 0%, 14%);
+    --altgreen: rgb(4, 144, 95);
 
     //Fonts
     --heading: 'Nothing You Could Do', cursive;
     --body: 'Open Sans', sans-serif;
+
+    //Sizings
+    --fullscreen: 100vh;
 }

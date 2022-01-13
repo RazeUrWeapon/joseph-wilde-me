@@ -6,6 +6,14 @@
     padding: rem(20) rem(20) rem(60);
     text-align: center;
 
+    @include breakpoint-up(medium) {
+        padding-bottom: rem(80);
+    }
+
+    // @include breakpoint-up(large) {
+    //     padding-bottom: rem(100);
+    // }
+
     h2 {
         margin-bottom: rem(20);
     }

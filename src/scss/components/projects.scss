@@ -1,0 +1,96 @@
+@use '../util' as *;
+
+#projects {
+    h2 {
+        margin-bottom: rem(20);
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(20);
+        flex-direction: column;
+
+        @include breakpoint-up(large) {
+            flex-direction: row;
+        }
+    }
+
+    .project {
+        &__card {
+            position: relative;
+            width: 90vw;
+            height: 150px;
+            padding: rem(15) rem(20) rem(8);
+            // display: flex;
+            // flex-direction: column;
+            background: linear-gradient(to right, var(--dkgray), var(--alt));
+            border-left: 2px solid var(--altgreen);
+            border-radius: rem(5);
+            box-shadow: -1px 15px 30px -12px rgba(0, 0, 0,0.5);
+            transform-origin: left;
+            transition: all 300ms ease-in;
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 45% 35% 20%;
+
+            @include breakpoint-up(large) {
+                max-width: 30vw;
+            }
+
+            @include breakpoint-up(xlarge) {
+                max-width: 25vw;
+            }
+
+            h3 {
+                position: relative;
+                margin-bottom: rem(10);
+            }
+
+            p {
+                position: relative;
+                max-width: rem(250);
+                margin-bottom: rem(20);
+                color: var(--ltgreen);
+                opacity: 0.8;
+            }
+
+            &--tech {
+                display: flex;
+                gap: rem(10);
+                align-self: end;
+                img {
+                    position: relative;
+                    width: rem(18);
+                    height: 100%;
+                }
+            }
+        }
+
+        &__card:hover,
+        &__card:focus {
+            border-left: 2px solid var(--ltgreen);
+            box-shadow: -1px 15px 30px -12px rgba(0,0,0,0.9);
+        }
+
+        &__card::before {
+            position: absolute;
+            content: '';
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 2px;
+            background-color: rgba(0,0,0,0.8);
+            opacity: 0;
+            transition: opacity 300ms ease-in;
+        }
+
+        &__card:hover::before,
+        &__card:focus::before {  
+            opacity: 0.15;
+        }
+    }
+}
