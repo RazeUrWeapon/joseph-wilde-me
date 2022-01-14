@@ -43,7 +43,7 @@
             }
 
             @include breakpoint-up(xlarge) {
-                max-width: 25vw;
+                max-width: rem(440);
             }
 
             h3 {
