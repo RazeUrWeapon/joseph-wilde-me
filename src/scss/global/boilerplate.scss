@@ -107,3 +107,31 @@ h2 {
 .fade-out {
     animation: fade-out 300ms ease-in-out forwards;
 }
+
+// Hide header on scroll
+.hide {
+    top: rem(-60);
+
+    @include breakpoint-up(medium) {
+        top: rem(-70);
+    }
+
+    @include breakpoint-up(large) {
+        top: rem(-80);
+    }
+}
+
+// Show full section when link is clicked
+#projects,
+#articles,
+#contact {
+    scroll-margin-top: rem(70);
+
+    @include breakpoint-up(medium) {
+        scroll-margin-top: rem(80);
+    }
+
+    @include breakpoint-up(large) {
+        scroll-margin-top: rem(90);
+    }
+}

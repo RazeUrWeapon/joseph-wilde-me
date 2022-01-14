@@ -1,13 +1,22 @@
 @use '../util' as *;
 
 header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    margin-top: 2%;
+    height: rem(60);
     padding: 0 5% 0;
+    // background-color: var(--dkgray);
+    transition: all 300ms ease;
+    z-index: 99;
+
+    @include breakpoint-up(medium) {
+        height: rem(70);
+    }
 
     @include breakpoint-up(large) {
+        height: rem(80);
         padding: 0 10% 0;
-        margin-top: 1%;
     }
     // Overlay for mobile menu
     .overlay {
@@ -21,6 +30,7 @@ header {
     }
 
     nav {
+        height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -43,6 +53,7 @@ header {
         // Hamburger menu styling
         .header__toggle { 
             > span {
+                position: relative;
                 display: block;
                 width: rem(26);
                 height: rem(2);
@@ -143,4 +154,15 @@ header {
             display: none;
         }
     }
+}
+
+header::before {
+    position: absolute;
+    content: '';
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--dkgray);
+    opacity: 0.95;
 }
