@@ -165,6 +165,48 @@
 				</a>	
 			</div>
 		</section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<div class="contact">
+				<form class="contact__form" action="" method="POST">
+					<p>Drop me a message:</p>
+					<div class="contact__form--input">
+						<input id="name" type="text" placeholder="Name" name="name" autocomplete="name" required>
+						<label for="name"></label>
+					</div>
+					<div class="contact__form--input">
+						<input id="email" type="email" placeholder="E-mail" name="email" autocomplete="email" required>
+						<label for="email"></label>
+					</div>
+					<div class="contact__form--input">
+						<textarea id="message" placeholder="Your message here..." name="message" required></textarea>
+						<label for="message"></label>
+					</div>
+					<button id="contactFormButton" class="button" type="sumbit">Send</button>
+					<input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#contact">
+				</form>
+				<div class="contact__info">
+					<div class="contact__info--email">
+						<p>Write me an e-mail at:</p>
+						<h3 id="workEmail">jwilde.work@gmail.com</h3>
+					</div>
+					<div class="contact__info--socials">
+						<p>Connect on social media:</p>
+						<div>
+							<a href="">
+								<img class="twitter" src="/img/twitter_icon.png" alt="Twitter icon">
+							</a>
+							<a href="">
+								<img class="linkedin" src="/img/linkedin_icon.png" alt="LinkedIn icon">
+							</a>
+							<a href="">
+								<img class="github" src="/img/github_icon.png" alt="Github icon">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<footer>
 
 		</footer>

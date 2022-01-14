@@ -4,6 +4,23 @@ const nav = document.querySelector('nav');
 const overlay = document.querySelector('.overlay');
 const fadeElements = document.querySelectorAll('.has-fade');
 const mobileMenu = document.querySelector('.mobile-menu');
+const typewriterText = document.querySelector('.typewriter-text');
+const phrases = [
+    'being a dog dad. ',
+    'learning about blockchain technologies. ',
+    'DJing for fun. ',
+    'playing games with friends. '
+];
+const workEmail = document.querySelector('#workEmail');
+const formButton = document.querySelector('#contactFormButton');
+const contactForm = document.querySelector('.contact__form');
+
+let i = 0;
+let j = 0;
+let currentPhrase = [];
+let isDeleting = false;
+let isEnd = false;
+let typewriterTime = 90;
 
 function openMobileMenu() {
     body.classList.add('noscroll');
@@ -37,21 +54,6 @@ mobileMenu.addEventListener('click', () => {
 });
 
 // Typewriter effect in hero section
-const typewriterText = document.querySelector('.typewriter-text');
-const phrases = [
-    'being a dog dad. ',
-    'learning about blockchain technologies. ',
-    'DJing for fun. ',
-    'playing games with friends. '
-]
-
-let i = 0;
-let j = 0;
-let currentPhrase = [];
-let isDeleting = false;
-let isEnd = false;
-let typewriterTime = 90;
-
 function loopTypewriterText() {
     isEnd = false;
 
@@ -88,3 +90,30 @@ function loopTypewriterText() {
 }
 
 loopTypewriterText();
+
+// Functions to change Email text on hover/touch
+function copyClipboardText() {
+    workEmail.textContent = 'copy to clipboard';
+    workEmail.style.color = 'hsl(159,92%,56%)';
+}
+
+function returnEmailText() {
+    workEmail.textContent = 'jwilde.work@gmail.com';
+    workEmail.style.color = 'rgb(255, 255, 255)';
+}
+
+// Copy email to clipboard on click
+workEmail.addEventListener('click', () => {
+    navigator.clipboard.writeText('jwilde.work@gmail.com');
+});
+
+// Change email text on hover / touch
+workEmail.addEventListener('mouseover', copyClipboardText);
+workEmail.addEventListener('mouseleave', returnEmailText);
+workEmail.addEventListener('touchstart', copyClipboardText);
+workEmail.addEventListener('touchend', returnEmailText);
+
+// Contact form sumbit button functionality
+formButton.addEventListener('submit', () => {
+    contactForm.innerHTML = `<h2> I'll get back to you as soon as possible :)</h2>`;
+});
