@@ -1,87 +1,189 @@
 @use '../util' as *;
 
-#articles {
-    margin: rem(20) 0 rem(80);
-    text-align: center;
+.article-container {
+    width: 90vw;
+    max-width: rem(800);
+    margin: 0 auto;
 
-    h2 {
-        margin-bottom: rem(20);
-        flex: 0 0 100%;
+    @include breakpoint-up(xlarge) {
+        max-width: rem(1200);
     }
 
-    .articles-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: rem(20);
-        flex-wrap: wrap;
+    a {
+        color: var(--ltgreen);
+        opacity:0.9;
+        transition: 300ms;
+    }
+
+    a:hover,
+    a:focus {
+        opacity: 0.5;
+    }
+
+    .back-to-main {
+        margin: rem(40) auto;
+        color: var(--ltgreen);
+        opacity: 0.9;
+
+        @include breakpoint-up(xlarge) {
+            font-size: rem(18);
+        }
     }
 
     .article {
-        position: relative;
-        width: rem(350);
-        height: rem(320);
-        margin: 0 auto;
-        padding: rem(10) rem(20) rem(5);
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 10% 30% 10% 50%;
-        align-items: center;
-        background: linear-gradient(to top, var(--dkgray), var(--alt));
-        border-radius: rem(5);
-        box-shadow: -1px 15px 30px -12px rgba(0, 0, 0,0.5);
-        transition: all 300ms;
+        padding: rem(40) rem(15) rem(10);
+        display: flex;
+        flex-direction: column;
+        border-top: 2px solid var(--ltgreen);
+        border-right: 2px solid var(--alt);
+        border-bottom: 2px solid var(--alt);
+        border-left: 2px solid var(--alt);
+        border-radius: 8px 8px 0 0;
+        text-align: left;
+        box-shadow: -1px 15px 30px -12px rgba(0, 0, 0, 0.5);
 
-        &__topic {
-            grid-row: 1 / 2;
+        @include breakpoint-up(medium) {
+            padding: rem(40) rem(30) rem(10);
+        }
+
+        @include breakpoint-up(xlarge) {
+            padding: rem(50) rem(50) rem(10);
+        }
+
+        .category {
+            margin-bottom: rem(1);
+            letter-spacing: rem(3);
+            text-transform: uppercase;
             color: var(--ltgreen);
+            font-size: rem(15);
+
+            @include breakpoint-up(medium) {
+                font-size: rem(18);
+            }
+
+            @include breakpoint-up(xlarge) {
+                font-size: rem(22);
+            }
         }
 
-        h3 {
-            grid-row: 2 / 3;
-            text-align: left;
-        }
+        .estimation {
+            margin-bottom: rem(40);
+            font-size: rem(14);
+            color: rgba(255, 255, 255, 0.6);
 
-        &__desc {
-            grid-row: 3 / 4;
-            text-align: left;
-            opacity: 0.8;
+            @include breakpoint-up(medium) {
+                font-size: rem(16);
+            }
         }
 
         &__img {
-            width: 100%;
-            height: rem(125);
-            grid-row: 4 / 5;
-            background: url('/img/project_preview_desktop.svg') center center;
+            margin: 0 0 rem(40);
+            padding-bottom: 60%;
+            background-position: center;
             background-size: cover;
-            align-self: bottom;
-            opacity: 0.5;
+            opacity: 0.6;
+
+            @include breakpoint-up(medium) {
+                padding-bottom: 50%;
+            }
+
+            @include breakpoint-up(xlarge) {
+                padding-bottom: 45%;
+            }
         }
-    }
 
-    .article:hover,
-    .article:focus {
-        box-shadow: -1px 15px 30px -12px rgba(0, 0, 0,0.8);
-        transform: scale(1.02);
-    }
+        &__index {
+            margin-bottom: rem(20);
 
-    .article::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: rem(2);
-        background-color: var(--ltgreen);
-        opacity: 0;
-        transform: scale(0);
-        transform-origin: left;
-        transition: all 500ms;
-    }
+            ul {
+                margin-left: rem(20);
+                list-style-type: none;
 
-    .article:hover::after,
-    .article:focus::after {
-        opacity: 1;
-        transform: scale(1);
+                li {
+                    margin-bottom: rem(10);
+                    line-height: 1.7;
+
+                    @include breakpoint-up(medium) {
+                        font-size: rem(20);
+                    }
+
+                    @include breakpoint-up(xlarge) {
+                        font-size: rem(22);
+                    }
+                }
+            }
+        }
+
+        h1 {
+            margin-bottom: rem(50);
+            font-size: rem(36);
+            line-height: 1;
+
+            @include breakpoint-up(medium) {
+                font-size: rem(44);
+                line-height: 1.2;
+            }
+
+            @include breakpoint-up(xlarge) {
+                font-size: rem(58);
+            }
+        }
+
+        h3 {
+            margin-bottom: rem(30);
+            font-size: rem(29);
+            color: var(--ltgreen);
+
+            @include breakpoint-up(medium) {
+                font-size: rem(36);
+            }
+
+            @include breakpoint-up(xlarge) {
+                font-size: rem(46);
+            }
+        }
+
+        p {
+            margin-bottom: rem(30);
+            line-height: 1.8;
+
+            @include breakpoint-up(medium) {
+                font-size: rem(20);
+            }
+
+            @include breakpoint-up(xlarge) {
+                font-size: rem(22);
+            }
+        }
+
+        .article-img {
+            margin: 0 0 rem(40);
+            padding-bottom: 60%;
+            background-position: top;
+            background-size: cover;
+            opacity: 0.9;
+
+            @include breakpoint-up(medium) {
+                padding-bottom: 50%;
+            }
+
+            @include breakpoint-up(xlarge) {
+                padding-bottom: 45%;
+            }
+        }
+
+        .source {
+            color: var(--altgreen);
+        }
+
+        iframe {
+            @include breakpoint-up(medium) {
+                height: rem(350);
+            }
+
+            @include breakpoint-up(xlarge) {
+                height: rem(550);
+            }
+        }
     }
 }

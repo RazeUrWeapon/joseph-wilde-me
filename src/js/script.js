@@ -133,13 +133,11 @@ formButton.addEventListener('submit', () => {
     const header = document.querySelector('header');
   
     let checkScroll = function() {
-  
-      /*
-      ** Find the direction of scroll
-      ** 0 - initial, 1 - up, 2 - down
-      */
-  
+      // Find the direction of scroll
+      // 0 - initial, 1 - up, 2 - down
+
       curScroll = w.scrollY || doc.scrollTop;
+
       if (curScroll > prevScroll) { 
         //scrolled up
         direction = 2;
@@ -157,10 +155,7 @@ formButton.addEventListener('submit', () => {
     };
   
     var toggleHeader = function(direction, curScroll) {
-      if (direction === 2 && curScroll > 58.5) { 
-  
-        //replace 52 with the height of your header in px
-  
+      if (direction === 2 && curScroll > 58.5) {   
         header.classList.add('hide');
         prevDirection = direction;
       }

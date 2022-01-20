@@ -27,7 +27,7 @@ a:link {
 
 body {
 	font-family: var(--body);
-	color: var(--white);
+	color: white;
 }
 
 h2 {
@@ -51,14 +51,8 @@ h2 {
 
 	&:hover,
     &:focus {
-		box-shadow: 0 0 5px 1px var(--altgreen);
 		border: 1px solid var(--ltgreen);
 	}
-
-    // @include breakpoint-up(large) {
-    //     box-shadow: none;
-    //     border: 1px solid var(--altgreen);
-    // }
 }
 
 // Mobile menu fade in/out effects

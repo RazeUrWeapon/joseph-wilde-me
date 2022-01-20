@@ -24,31 +24,35 @@
         &__card {
             position: relative;
             width: 90vw;
-            height: 150px;
+            height: rem(150);
             padding: rem(15) rem(20) rem(8);
-            // display: flex;
-            // flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: rem(55) 1fr 1fr;
             background: linear-gradient(to right, var(--dkgray), var(--alt));
             border-left: 2px solid var(--altgreen);
             border-radius: rem(5);
             box-shadow: -1px 15px 30px -12px rgba(0, 0, 0,0.5);
             transition: all 300ms ease-in;
 
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 45% 35% 20%;
+            @include breakpoint-up(medium) {
+                grid-template-rows: rem(35) 1fr 1fr;
+            }
 
             @include breakpoint-up(large) {
                 max-width: 30vw;
+                grid-template-rows: rem(55) 1fr 1fr;
             }
 
             @include breakpoint-up(xlarge) {
                 max-width: rem(440);
+                grid-template-rows: rem(40) 1fr 1fr;
             }
 
             h3 {
                 position: relative;
                 margin-bottom: rem(10);
+                grid-row: 1 / 2;
                 
                 @include breakpoint-up(medium) {
                     font-size: rem(20);
@@ -57,20 +61,84 @@
 
             p {
                 position: relative;
-                max-width: rem(250);
                 margin-bottom: rem(20);
+                grid-row: 2 / 3;
                 color: var(--ltgreen);
                 opacity: 0.8;
             }
 
-            &--tech {
+            &--bottom-row {
                 display: flex;
-                gap: rem(10);
+                justify-content: space-between;
                 align-self: end;
-                img {
-                    position: relative;
-                    width: rem(18);
-                    height: 100%;
+                grid-row: 3 / 4;
+
+                .tech {
+                    display: flex;
+                    gap: rem(7);
+
+                    img {
+                        position: relative;
+                        width: rem(18);
+                        height: 100%;
+                    }
+                }
+
+                .project-buttons {
+                    display: flex;
+                    gap: rem(12);
+
+                    @include breakpoint-up(medium) {
+                        gap: rem(15);
+                    }
+
+                    @include breakpoint-up(large) {
+                        gap: rem(12);
+                    }
+
+                    @include breakpoint-up(xlarge) {
+                        gap: rem(15);
+                    }
+
+                    a {
+                        position: relative;
+                        font-size: rem(15);
+                        color: rgba(255,255,255,0.7);
+                        border-bottom: 2px solid;
+                        border-image: linear-gradient(to right, var(--altgreen), rgba(4, 144, 95,0.6));
+                        border-image-slice: 1;
+                        cursor: pointer;
+                        z-index: 1;
+                        transition: color 300ms;
+
+                        @include breakpoint-up(medium) {
+                            font-size: rem(16);
+                        }
+                    }
+
+                    a:hover,
+                    a:focus {
+                        color: rgba(255, 255, 255, 1);
+                    }
+
+                    a::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0;
+                        width: 100%;
+                        height: rem(2);
+                        background-color: var(--ltgreen);
+                        opacity: 0;
+                        transform: scale(0);
+                        transform-origin: center;
+                        transition: opacity 300ms, transform 300ms;
+                    }
+                    a:hover::after,
+                    a:focus::after {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
                 }
             }
         }
@@ -81,7 +149,7 @@
             box-shadow: -1px 15px 30px -12px rgba(0,0,0,0.9);
         }
 
-        &__card::before {
+        &__card::after {
             position: absolute;
             content: '';
             top: 0px;
@@ -93,8 +161,8 @@
             transition: opacity 300ms ease-in;
         }
 
-        &__card:hover::before,
-        &__card:focus::before {  
+        &__card:hover::after,
+        &__card:focus::after {  
             opacity: 0.15;
         }
     }
