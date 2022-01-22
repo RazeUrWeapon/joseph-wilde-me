@@ -24,10 +24,6 @@
         margin: rem(40) auto;
         color: var(--ltgreen);
         opacity: 0.9;
-
-        @include breakpoint-up(xlarge) {
-            font-size: rem(18);
-        }
     }
 
     .article {
@@ -59,10 +55,6 @@
 
             @include breakpoint-up(medium) {
                 font-size: rem(18);
-            }
-
-            @include breakpoint-up(xlarge) {
-                font-size: rem(22);
             }
         }
 
@@ -104,11 +96,7 @@
                     line-height: 1.7;
 
                     @include breakpoint-up(medium) {
-                        font-size: rem(20);
-                    }
-
-                    @include breakpoint-up(xlarge) {
-                        font-size: rem(22);
+                        font-size: rem(18);
                     }
                 }
             }
@@ -123,10 +111,6 @@
                 font-size: rem(44);
                 line-height: 1.2;
             }
-
-            @include breakpoint-up(xlarge) {
-                font-size: rem(58);
-            }
         }
 
         h3 {
@@ -137,10 +121,6 @@
             @include breakpoint-up(medium) {
                 font-size: rem(36);
             }
-
-            @include breakpoint-up(xlarge) {
-                font-size: rem(46);
-            }
         }
 
         p {
@@ -148,11 +128,7 @@
             line-height: 1.8;
 
             @include breakpoint-up(medium) {
-                font-size: rem(20);
-            }
-
-            @include breakpoint-up(xlarge) {
-                font-size: rem(22);
+                font-size: rem(18);
             }
         }
 
@@ -182,7 +158,7 @@
             }
 
             @include breakpoint-up(xlarge) {
-                height: rem(550);
+                height: rem(500);
             }
         }
     }
