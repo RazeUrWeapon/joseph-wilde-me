@@ -24,7 +24,7 @@
         &__card {
             position: relative;
             width: 90vw;
-            height: rem(150);
+            height: rem(165);
             padding: rem(15) rem(20) rem(8);
             display: grid;
             grid-template-columns: 1fr;
@@ -164,6 +164,14 @@
         &__card:hover::after,
         &__card:focus::after {  
             opacity: 0.15;
+        }
+
+        &__direction {
+            margin-top: rem(15);
+            padding: 0 rem(40);
+            text-align: center;
+            font-size: rem(14);
+            color: rgba(255, 255, 255, 0.3);
         }
     }
 }
