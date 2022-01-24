@@ -104,12 +104,7 @@
                         position: relative;
                         font-size: rem(15);
                         color: rgba(255,255,255,0.7);
-                        border-top: none;
-                        border-right: none;
-                        border-bottom: 2px solid;
-                        border-left: none;
-                        border-image: linear-gradient(to right, var(--altgreen), rgba(4, 144, 95,0.6));
-                        border-image-slice: 1;
+                        border-bottom: 2px solid var(--altgreen);
                         cursor: pointer;
                         z-index: 1;
                         transition: color 300ms;
