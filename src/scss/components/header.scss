@@ -52,6 +52,8 @@ header {
         }
         // Hamburger menu styling
         .header__toggle { 
+            transform: scale(1.2);
+
             > span {
                 position: relative;
                 display: block;
