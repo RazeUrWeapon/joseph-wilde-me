@@ -19,7 +19,7 @@
         margin: rem(80) auto 8%;
         padding: 5vh 0;
         flex-direction: row;
-        gap: rem(100);
+        gap: rem(130);
     }
 
     &__info {
@@ -33,33 +33,26 @@
             padding-top: 5%;
             grid-template-rows: rem(205) rem(60);
         }
-        @include breakpoint-up(large) {
-            margin: auto;
-            flex: 1 1 50%;
-        }
 
         &--heading {
-            @include breakpoint-up(large) {
-                margin: auto;
-            }
-    
+
             h2 {
                 margin-bottom: rem(10);
+                font-size: rem(34);
     
                 @include breakpoint-up(medium) {
                     margin-bottom: rem(20);
+                    font-size: rem(38);
+                }
+
+                @include breakpoint-up(large) {
+                    font-size: rem(42);
                 }
             }
             
             p {
-                margin-bottom: rem(50);
                 font-size: rem(20);
                 line-height: 1.5;
-    
-                @include breakpoint-up(medium) {
-                    margin-bottom: rem(80);
-                    font-size: rem(18);
-                }
 
                 span {
                     color: var(--ltgreen);
@@ -87,15 +80,18 @@
     }
 
     &__image {
-        max-width: rem(350);
-        max-height: rem(350);
-        flex: 1 1 80%;
+        width: rem(320);
+        height: rem(320);
         order: -1;
         opacity: 0.9;
         aspect-ratio: 1/1;
+        
+        @include breakpoint-up(medium) {
+            width: rem(350);
+            height: rem(350);
+        }
 
         @include breakpoint-up(large) {
-            flex: 1 1 50%;
             order: 0;
         }
 
