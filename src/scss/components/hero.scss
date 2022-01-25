@@ -34,6 +34,10 @@
             grid-template-rows: rem(205) rem(60);
         }
 
+        @include breakpoint-up(large) {
+            padding: 0;
+        }
+
         &--heading {
 
             h2 {
@@ -51,6 +55,7 @@
             }
             
             p {
+                margin-bottom: rem(10);
                 font-size: rem(20);
                 line-height: 1.5;
 
