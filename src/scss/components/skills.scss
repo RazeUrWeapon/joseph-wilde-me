@@ -9,11 +9,7 @@
     @include breakpoint-up(medium) {
         margin-bottom: rem(80);
     }
-
-    // @include breakpoint-up(large) {
-    //     padding-bottom: rem(100);
-    // }
-
+    
     h2 {
         margin-bottom: rem(20);
     }
