@@ -104,7 +104,7 @@ function returnEmailText() {
 
 // Copy email to clipboard on click
 workEmail.addEventListener('click', () => {
-    navigator.clipboard.writeText('jwilde.work@gmail.com');
+    navigator.clipboard.writeText('jmwilde.work@gmail.com');
 });
 
 // Change email text on hover / touch
