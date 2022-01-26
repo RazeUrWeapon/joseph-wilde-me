@@ -1,7 +1,6 @@
 const body = document.querySelector('body');
 const hamburgerMenu = document.querySelector('#hamburgerButton');
 const nav = document.querySelector('nav');
-const overlay = document.querySelector('.overlay');
 const fadeElements = document.querySelectorAll('.has-fade');
 const mobileMenu = document.querySelector('.mobile-menu');
 const typewriterText = document.querySelector('.typewriter-text');
@@ -98,7 +97,7 @@ function copyClipboardText() {
 }
 
 function returnEmailText() {
-    workEmail.textContent = 'jwilde.work@gmail.com';
+    workEmail.textContent = 'jmwilde.work@gmail.com';
     workEmail.style.color = 'rgb(255, 255, 255)';
 }
 
@@ -121,21 +120,18 @@ formButton.addEventListener('submit', () => {
 // Hide header on scroll down and show on scroll up
 // ** https://codingreflections.com/hide-header-on-scroll-down/ **
 (function(){
+    const header = document.querySelector('header');
 
     let doc = document.documentElement;
     let w = window;
-  
     let prevScroll = w.scrollY || doc.scrollTop;
     let curScroll;
     let direction = 0;
     let prevDirection = 0;
-
-    const header = document.querySelector('header');
   
     let checkScroll = function() {
       // Find the direction of scroll
       // 0 - initial, 1 - up, 2 - down
-
       curScroll = w.scrollY || doc.scrollTop;
 
       if (curScroll > prevScroll) { 
@@ -154,7 +150,7 @@ formButton.addEventListener('submit', () => {
       prevScroll = curScroll;
     };
   
-    var toggleHeader = function(direction, curScroll) {
+    let toggleHeader = function(direction, curScroll) {
       if (direction === 2 && curScroll > 58.5) {   
         header.classList.add('hide');
         prevDirection = direction;
@@ -165,6 +161,5 @@ formButton.addEventListener('submit', () => {
       }
     };
   
-    window.addEventListener('scroll', checkScroll);
-  
-  })();
+    window.addEventListener('scroll', checkScroll);  
+})();

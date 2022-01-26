@@ -22,8 +22,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: rem(15);
+        gap: rem(10);
         flex-wrap: wrap;
+
+        @include breakpoint-up(medium) {
+            gap: rem(15);
+        }
 
         &--underline {
             width: rem(80);
@@ -31,10 +35,15 @@
             position: relative;
 
             img {
-                width: rem(75);
-                height: rem(75);
+                width: rem(65);
+                height: rem(65);
                 transform: scale(1);
                 transition: transform 300ms;
+            }
+
+            @include breakpoint-up(medium) {
+                width: rem(75);
+                height: rem(75);
             }
 
             img:hover {
