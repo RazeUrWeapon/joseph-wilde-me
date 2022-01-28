@@ -102,9 +102,17 @@ function returnEmailText() {
 }
 
 // Copy email to clipboard on click
-workEmail.addEventListener('click', () => {
-    navigator.clipboard.writeText('jmwilde.work@gmail.com');
-});
+function copyToClipboard() {
+    let range = document.createRange();
+    
+    range.selectNode(cipherOutput);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+}
+
+workEmail.addEventListener('click', copyToClipboard);
 
 // Change email text on hover / touch
 workEmail.addEventListener('mouseover', copyClipboardText);
