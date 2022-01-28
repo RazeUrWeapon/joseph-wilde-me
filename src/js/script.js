@@ -103,13 +103,7 @@ function returnEmailText() {
 
 // Copy email to clipboard on click
 function copyToClipboard() {
-    let range = document.createRange();
-    
-    range.selectNode(cipherOutput);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand('copy');
-    window.getSelection().removeAllRanges();
+    navigator.clipboard.writeText('jmwilde.work@gmail.com');
 }
 
 workEmail.addEventListener('click', copyToClipboard);
