@@ -91,32 +91,32 @@ function loopTypewriterText() {
 loopTypewriterText();
 
 // Functions to change Email text on hover/touch
-function copyClipboardText() {
-    workEmail.textContent = 'copy to clipboard';
-    workEmail.style.color = 'hsl(159,92%,56%)';
-}
+// function copyClipboardText() {
+//     workEmail.textContent = 'copy to clipboard';
+//     workEmail.style.color = 'hsl(159,92%,56%)';
+// }
 
-function returnEmailText() {
-    workEmail.textContent = 'jmwilde.work@gmail.com';
-    workEmail.style.color = 'rgb(255, 255, 255)';
-}
+// function returnEmailText() {
+//     workEmail.textContent = 'jmwilde.work@gmail.com';
+//     workEmail.style.color = 'rgb(255, 255, 255)';
+// }
 
 // Copy email to clipboard on click
-function copyToClipboard() {
-    navigator.clipboard.writeText('jmwilde.work@gmail.com');
-}
+// function copyToClipboard() {
+//     navigator.clipboard.writeText('jmwilde.work@gmail.com');
+// }
 
-workEmail.addEventListener('click', copyToClipboard);
+// workEmail.addEventListener('click', copyToClipboard);
 
 // Change email text on hover / touch
-workEmail.addEventListener('mouseover', copyClipboardText);
-workEmail.addEventListener('mouseleave', returnEmailText);
-workEmail.addEventListener('touchstart', copyClipboardText);
-workEmail.addEventListener('touchend', returnEmailText);
+// workEmail.addEventListener('mouseover', copyClipboardText);
+// workEmail.addEventListener('mouseleave', returnEmailText);
+// workEmail.addEventListener('touchstart', copyClipboardText);
+// workEmail.addEventListener('touchend', returnEmailText);
 
 // Contact form sumbit button functionality
 formButton.addEventListener('submit', () => {
-    contactForm.innerHTML = `<h2> I'll get back to you as soon as possible :)</h2>`;
+    contactForm.innerHTML = `<h2>I'll get back to you as soon as possible :)</h2>`;
 });
 
 // Hide header on scroll down and show on scroll up
