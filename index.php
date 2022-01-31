@@ -11,8 +11,8 @@
         <title>Joseph Wilde | Front-End Developer</title>
 
 		<link rel="shortcut icon" href="img/jw_favicon.png" />
-		<link rel="stylesheet" href="/dist/style.css" />
-		<script defer src="/dist/script.js"></script>
+		<link rel="stylesheet" href="dist/style.css" />
+		<script defer src="dist/script.js"></script>
 	</head>
 	<body>
 		<header>
@@ -65,28 +65,28 @@
 			<h2>Tools & Skills</h2>
 			<div class="skills__icons">
 				<div class="skills__icons--underline">
-					<img src="/img/html5_icon.svg" alt="html icon">
+					<img src="img/html5_icon.svg" alt="html icon">
 				</div>
 				<div class="skills__icons--underline">
-					<img src="/img/css3_icon.svg" alt="css icon">
+					<img src="img/css3_icon.svg" alt="css icon">
 				</div>
 				<div class="skills__icons--underline">
-					<img src="/img/javascript_icon.svg" alt="javascript icon">
+					<img src="img/javascript_icon.svg" alt="javascript icon">
 				</div>
 				<div class="skills__icons--underline">
-					<img src="/img/sass_icon.svg" alt="sass icon">
+					<img src="img/sass_icon.svg" alt="sass icon">
 				</div>
 				<div class="skills__icons--underline">
-					<img src="/img/github_icon.svg" alt="github icon">
+					<img src="img/github_icon.svg" alt="github icon">
 				</div>
 				<div class="skills__icons--underline">
-					<img src="/img/git_icon.svg" alt="git icon">
+					<img src="img/git_icon.svg" alt="git icon">
 				</div>
 				<div class="skills__icons--underline">
-					<img src="/img/npm_icon.svg" alt="npm icon">
+					<img src="img/npm_icon.svg" alt="npm icon">
 				</div>
 				<div class="skills__icons--underline">
-					<img src="/img/gulp_icon.svg" alt="gulp icon">
+					<img src="img/gulp_icon.svg" alt="gulp icon">
 				</div>
 			</div>
 		</section>
@@ -99,10 +99,10 @@
 						<p>Webpage for a local business.</p>
 						<div class="project__card--bottom-row">
 							<div class="tech">
-								<img src="/img/html5_icon.svg" alt="">
-								<img src="/img/css3_icon.svg" alt="">
-								<img src="/img/javascript_icon.svg" alt="">
-								<img src="/img/sass_icon.svg" alt="">
+								<img src="img/html5_icon.svg" alt="">
+								<img src="img/css3_icon.svg" alt="">
+								<img src="img/javascript_icon.svg" alt="">
+								<img src="img/sass_icon.svg" alt="">
 							</div>
 							<div class="project-buttons">
 								<a href="https://townnailsandspa.com/">Live Site</a>
@@ -117,9 +117,9 @@
 						<p>A modern take on a classic game.</p>
 						<div class="project__card--bottom-row">
 							<div class="tech">
-								<img src="/img/html5_icon.svg" alt="">
-								<img src="/img/css3_icon.svg" alt="">
-								<img src="/img/javascript_icon.svg" alt="">
+								<img src="img/html5_icon.svg" alt="">
+								<img src="img/css3_icon.svg" alt="">
+								<img src="img/javascript_icon.svg" alt="">
 							</div>
 							<div class="project-buttons">
 								<a href="https://rock-paper-scissors-squid-game-edition.vercel.app/">Live Demo</a>
@@ -134,9 +134,9 @@
 						<p>My first personal project. A customized cipher.</p>
 						<div class="project__card--bottom-row">
 							<div class="tech">
-								<img src="/img/html5_icon.svg" alt="">
-								<img src="/img/css3_icon.svg" alt="">
-								<img src="/img/javascript_icon.svg" alt="">
+								<img src="img/html5_icon.svg" alt="">
+								<img src="img/css3_icon.svg" alt="">
+								<img src="img/javascript_icon.svg" alt="">
 							</div>
 							<div class="project-buttons">
 								<a href="https://murder-mystery-cipher.vercel.app/">Live Demo</a>
@@ -151,7 +151,7 @@
 		<section id="articles">
 			<h2>Articles</h2>
 			<div class="articles-container">
-				<a href="/html/what-resources-i-used-to-teach-myself-how-to-code.html">
+				<a href="html/what-resources-i-used-to-teach-myself-how-to-code.html">
 					<div class="article">
 						<p class="article__category">Web Development</p>
 						<h3>What Resources I Used to Teach Myself How to Code in Just 4 Months!</h3>
@@ -159,7 +159,7 @@
 						<div class="article__img" style="background-image: url('img/resources_article_main.svg');"></div>
 					</div>
 				</a>
-				<a href="/html/challenges-and-rewards-of-learning-to-code-on-my-own.html">
+				<a href="html/challenges-and-rewards-of-learning-to-code-on-my-own.html">
 					<div class="article">
 						<p class="article__category">Web Development</p>
 						<h3>The challenges and rewards of learning to code on my own.</h3>
@@ -172,22 +172,21 @@
 		<section id="contact">
 			<h2>Contact</h2>
 			<div class="contact">
-				<form class="contact__form" action="https://formsubmit.co/fafc8c1eb399d9780023ee178fccfca3" method="POST">
+				<form class="contact__form" action="php/contactform.php" method="POST">
 					<p>Drop me a message:</p>
 					<div class="contact__form--input">
-						<input id="name" type="text" placeholder="Name" name="name" autocomplete="name" required>
+						<input id="name" type="text" name="name" placeholder="Name" autocomplete="name" required>
 						<label for="name"></label>
 					</div>
 					<div class="contact__form--input">
-						<input id="email" type="email" placeholder="E-mail" name="email" autocomplete="email" required>
+						<input id="email" type="email"  name="email" placeholder="E-mail" autocomplete="email" required>
 						<label for="email"></label>
 					</div>
 					<div class="contact__form--input">
-						<textarea id="message" placeholder="Your message here..." name="message" required></textarea>
+						<textarea id="message" name="message" placeholder="Your message here..." required></textarea>
 						<label for="message"></label>
 					</div>
-					<button id="contactFormButton" class="button" type="sumbit">Send</button>
-					<input type="hidden" name="_next" value="http://www.josephwilde.me/#contact">
+					<button id="contactFormButton" class="button" type="sumbit" name="submit">Send</button>
 				</form>
 				<div class="contact__info">
 					<div class="contact__info--email">
@@ -198,13 +197,13 @@
 						<p>Connect on social media:</p>
 						<div>
 							<a href="https://github.com/jwilde19">
-								<img class="github" src="/img/github_icon.png" alt="Github icon">
+								<img class="github" src="img/github_icon.png" alt="Github icon">
 							</a>
 							<a href="https://twitter.com/jwilde19">
-								<img class="twitter" src="/img/twitter_icon.png" alt="Twitter icon">
+								<img class="twitter" src="img/twitter_icon.png" alt="Twitter icon">
 							</a>
 							<a href="https://www.linkedin.com/in/joseph-michael1/">
-								<img class="linkedin" src="/img/linkedin_icon.png" alt="LinkedIn icon">
+								<img class="linkedin" src="img/linkedin_icon.png" alt="LinkedIn icon">
 							</a>
 						</div>
 					</div>
