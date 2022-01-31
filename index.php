@@ -172,7 +172,7 @@
 		<section id="contact">
 			<h2>Contact</h2>
 			<div class="contact">
-				<form class="contact__form" action="php/contactform.php" method="POST">
+				<form class="contact__form" action="dist/contactform.php" method="POST">
 					<p>Drop me a message:</p>
 					<div class="contact__form--input">
 						<input id="name" type="text" name="name" placeholder="Name" autocomplete="name" required>
