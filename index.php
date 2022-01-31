@@ -186,7 +186,7 @@
 						<textarea id="message" name="message" placeholder="Your message here..." required></textarea>
 						<label for="message"></label>
 					</div>
-					<button id="contactFormButton" class="button" type="sumbit" name="submit">Send</button>
+					<button id="contactFormButton" class="button" type="submit" name="submit">Send</button>
 				</form>
 				<div class="contact__info">
 					<div class="contact__info--email">
@@ -211,7 +211,7 @@
 			</div>
 		</section>
 		<footer>
-			<p>Made with &#10084 by <a href="">Joseph Wilde</a></p>
+			<p>Made with &#10084; by <a href="">Joseph Wilde</a></p>
 		</footer>
 	</body>
 </html>
