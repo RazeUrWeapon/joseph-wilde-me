@@ -90,10 +90,12 @@ function loopTypewriterText() {
 
 loopTypewriterText();
 
-// Contact form sumbit button functionality
-formButton.addEventListener('submit', () => {
-    contactForm.innerHTML = `<h2>I'll get back to you as soon as possible :)</h2>`;
-});
+//Copy email to clipboard on click
+function copyToClipboard() {
+    navigator.clipboard.writeText('joe@josephwilde.me');
+}
+
+workEmail.addEventListener('click', copyToClipboard);
 
 // Hide header on scroll down and show on scroll up
 // ** https://codingreflections.com/hide-header-on-scroll-down/ **
