@@ -153,6 +153,9 @@
         }
 
         iframe {
+            border: none;
+            width: 100%;
+
             @include breakpoint-up(medium) {
                 height: rem(350);
             }
