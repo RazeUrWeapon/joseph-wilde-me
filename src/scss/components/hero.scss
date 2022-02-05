@@ -2,7 +2,7 @@
 
 .hero {
     height: calc(100vh - 60px);
-    margin: rem(60) 0 rem(60);
+    margin: rem(60) 0;
     padding: 2% 5% 0;
     display: flex;
     flex-direction: column;
@@ -10,13 +10,13 @@
 
     @include breakpoint-up(medium) {
         height: 100%;
-        margin: rem(70) 0 8%;
+        margin: rem(70) 0 rem(80);
         padding: 5% 10% 0;
     }
 
     @include breakpoint-up(large) {
         max-width: rem(1004);
-        margin: rem(80) auto rem(80);
+        margin: rem(80) auto;
         padding: 5vh 0;
         flex-direction: row;
         gap: rem(130);
